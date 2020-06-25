@@ -112,7 +112,7 @@ func NewTaskProcessor(
 	taskRetryPolicy.SetMaximumAttempts(config.ReplicationTaskProcessorErrorRetryMaxAttempts(shardID))
 
 	dlqRetryPolicy := backoff.NewExponentialRetryPolicy(dlqErrorRetryWait)
-	dlqRetryPolicy.SetMaximumAttempts(5)
+	dlqRetryPolicy.SetExpirationInterval(backoff.NoInterval)
 
 	noTaskBackoffPolicy := backoff.NewExponentialRetryPolicy(config.ReplicationTaskProcessorNoTaskRetryWait(shardID))
 	noTaskBackoffPolicy.SetBackoffCoefficient(1)
