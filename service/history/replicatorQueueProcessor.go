@@ -450,7 +450,8 @@ func (p *replicatorQueueProcessorImpl) getTasks(
 			taskInfo.GetDomainID() == "024d94f4-e41b-459d-aa0e-853cb692d68d" ||
 			taskInfo.GetDomainID() == "17227b3e-26b8-444c-b9c8-1490a3e691bf" ||
 			taskInfo.GetDomainID() == "becfcf74-6d45-431f-98bb-03e3a1137a44" ||
-			taskInfo.GetDomainID() == "7714bf79-461a-45a4-89c1-4d1ea615e09f" {
+			taskInfo.GetDomainID() == "7714bf79-461a-45a4-89c1-4d1ea615e09f" ||
+			taskInfo.GetDomainID() =="df9681af-3d3c-4c94-bb5a-1a6a49dd8e49" {
 			readLevel = taskInfo.GetTaskID()
 			continue
 		}
