@@ -165,7 +165,7 @@ func (p *taskProcessorImpl) Stop() {
 func (p *taskProcessorImpl) processorLoop() {
 
 	if p.shard.GetShardID() == 14110 {
-		p.lastRetrievedMessageID = 3510000000
+		p.lastRetrievedMessageID = 3521499484
 	}
 	defer func() {
 		p.logger.Info("Closing replication task processor.", tag.ReadLevel(p.lastRetrievedMessageID))
